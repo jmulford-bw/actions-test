@@ -1,0 +1,17 @@
+name: Node CI
+
+on: [push]
+
+jobs:
+  build:
+    
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v1
+    - name: npm cli setup
+      run: |
+        npm install -g npm-cli-login
+        npm-cli-login -fail
+      env:
+        CI: true
