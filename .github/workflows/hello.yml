@@ -1,0 +1,14 @@
+name: Sample Flow
+
+on:
+  push:
+    tags:
+      - 'hello*'
+
+jobs:
+  checkoutEcho:
+    name: Runs Jacob's test action 
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code into VM
+      uses: jmulford-bw/ActionsTest
