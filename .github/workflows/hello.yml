@@ -11,4 +11,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout code into VM
-      uses: jmulford-bw/ActionsTest@master
+      uses: jmulford-bw/ActionsTest/test@master
