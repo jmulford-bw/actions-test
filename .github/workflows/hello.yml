@@ -13,5 +13,7 @@ jobs:
     - name: Fake command 
       continue-on-error: true
       run: lol idk
-    - name: Test response
-      run: test $? = 0
+    - name: Echo
+      run: echo $?
+    #- name: Test response
+    #  run: test $? = 0
