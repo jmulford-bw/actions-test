@@ -11,9 +11,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Fake command 
+      id: shouldfail
       run: lol idk
       continue-on-error: true
     - name: Test response
-      if: failure()
+      if: jobs.steps.shouldfail.status == failure()
       run: exit 1
 
