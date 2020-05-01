@@ -12,8 +12,8 @@ jobs:
     steps:
     - name: Fake command 
       continue-on-error: true
-      run: |
-        lol idk
-        echo $?
+      run: lol idk
     - name: Test response
-      run: echo $?
+      run: exit 1
+      if: failure()
+
