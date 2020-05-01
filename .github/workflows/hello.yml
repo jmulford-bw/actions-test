@@ -2,8 +2,8 @@ name: Sample Flow
 
 on:
   push:
-    tags:
-      - 'hello*'
+    branches:
+      - 'master'
 
 jobs:
   checkoutEcho:
@@ -12,8 +12,11 @@ jobs:
     steps:
     - name: Fake command 
       continue-on-error: true
-      run: lol idk
-    - name: Echo
-      run: echo $?
+      outputs:
+        out:
+          description: 'Test output'
+      run: |
+        lol idk
+        ::set-output name=out::$?
     #- name: Test response
     #  run: test $? = 0
