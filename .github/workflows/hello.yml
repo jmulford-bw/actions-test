@@ -11,7 +11,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Fake command 
-      continue-on-error: true
       run: lol idk
     - name: Test response
       run: exit 1
