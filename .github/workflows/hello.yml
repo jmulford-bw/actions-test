@@ -7,8 +7,11 @@ on:
 
 jobs:
   checkoutEcho:
-    name: Runs Jacob's test action 
+    name: Test expected failure
     runs-on: ubuntu-latest
     steps:
-    - name: Checkout code into VM
-      uses: jmulford-bw/ActionsTest@master
+    - name: Fake command 
+      continue-on-error: true
+      run: lol idk
+    - name: Test response
+      run: test $? = 0
