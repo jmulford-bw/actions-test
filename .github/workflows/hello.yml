@@ -12,9 +12,6 @@ jobs:
     steps:
     - name: Fake command 
       continue-on-error: true
-      output:
-        out:
-          description: 'Test output'
       run: |
         lol idk
         ::set-output name=out::$?
