@@ -12,7 +12,8 @@ jobs:
     steps:
     - name: Fake command 
       run: lol idk
+      continue-on-error: true
     - name: Test response
-      run: exit 1
       if: failure()
+      run: exit 1
 
