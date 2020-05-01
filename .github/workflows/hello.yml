@@ -12,7 +12,7 @@ jobs:
     steps:
     - name: Fake command 
       continue-on-error: true
-      outputs:
+      output:
         out:
           description: 'Test output'
       run: |
