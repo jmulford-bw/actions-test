@@ -15,4 +15,4 @@ jobs:
     - name: Hello
       uses: ./.github/actions/hello
       env:
-        HELLO: ${{ secrets.MY_NAME }}
+        MY_NAME: ${{ secrets.MY_NAME }}
