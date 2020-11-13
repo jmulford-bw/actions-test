@@ -1,0 +1,16 @@
+name: Hello
+  
+on:
+  pull_request:
+    branches:
+      - 'master'
+
+jobs:
+  hello:
+    name: Run hello
+    runs-on: ubuntu-latest
+    steps:
+    - name: Hello
+      run: ./.github/actions/hello
+      env:
+        HELLO: ${{ secrets.MY_NAME }}
