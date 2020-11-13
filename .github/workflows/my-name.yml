@@ -10,7 +10,9 @@ jobs:
     name: Run hello
     runs-on: ubuntu-latest
     steps:
+    - name: Checkout
+      uses: uses: actions/checkout@v2
     - name: Hello
-      run: ./.github/actions/hello
+      uses: ./.github/actions/hello
       env:
         HELLO: ${{ secrets.MY_NAME }}
