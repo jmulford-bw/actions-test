@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout
-      uses: uses: actions/checkout@v2
+      uses: actions/checkout@v2
     - name: Hello
       uses: ./.github/actions/hello
       env:
